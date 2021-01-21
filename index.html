@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Calorie counter</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.scss">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--Все заголовки одиныковые - один класс-->
+    <div class="app">
+        <h1 class="app-title">Счетчик калорий</h1>
+        <div class="app-wrapper">
+            <div class="app-container">
+
+                <!-- Верстка карточки пола -->
+                <section class="gender">
+                    <h3 class="section-title">Пол</h3>
+                    <div class="gender-wrapper">
+                        <!-- лучше сделать это как radio-button -->
+                        <input type="radio" id="man" name="gender" class="gender-radio" data-gender="5" checked>
+                        <label class="gender-man gender-btn" for="man">Мужчина</label>
+
+                        <input type="radio" id="woman" name="gender" class="gender-radio" data-gender="-161">
+                        <label class="gender-woman gender-btn" for="woman">Женщина</label>
+                    </div>
+                </section>
+                <!-- Верстка карточки пола -->
+
+                <!-- Верстка карточки параметров -->
+                <section class="parameters">
+                    <div class="parameters-wrapper">
+                         <h3 class="section-title">Возраст <span class="parameters-subtitle">лет</span></h3>
+                         <input type="number" class="section-input input-age" placeholder="24">
+                    </div>
+                    <div class="parameters-wrapper">
+                        <h3 class="section-title">Рост <span class="parameters-subtitle">см</span></h3>
+                        <input type="number" class="section-input input-height" placeholder="173">
+                    </div>
+                    <div class="parameters-wrapper">
+                        <h3 class="section-title">Вес <span class="parameters-subtitle">кг</span></h3>
+                        <input type="number" class="section-input input-weight" placeholder="83">
+                    </div>
+                </section>
+                <!-- Верстка карточки параметров -->
+
+                <!-- Верстка карточки активности -->
+                <section class="activity">
+                    <h3 class="section-title">Физическая активность</h3>
+
+                        <label class="radio">
+                            <div class="radio-wrapper">
+                                <input type="radio" class="radio__real" name="term" data-activity="1.2" checked>
+                                <span class="radio__fake"></span>
+                            </div>
+                            <div class="radio-title-wrapper">
+                                <span class="radio-title">Минимальная</span>
+                                <p class="radio-subtitle">Сидячая работа и нет физических нагрузок</p>
+                            </div>
+                        </label>
+
+                        <label class="radio">
+                            <div class="radio-wrapper">
+                                <input type="radio" class="radio__real" name="term" data-activity="1.375">
+                                <span class="radio__fake"></span>
+                            </div>
+                            <div class="radio-title-wrapper">
+                                <span class="radio-title">Низкая</span>
+                                <p class="radio-subtitle">Редкие, нерегулярные тренировки, активность в быту</p>
+                            </div>
+                        </label>
+
+                        <label class="radio">
+                            <div class="radio-wrapper">
+                                <input type="radio" class="radio__real" name="term" data-activity="1.55">
+                                <span class="radio__fake"></span>
+                            </div>
+                            <div class="radio-title-wrapper">
+                                <span class="radio-title">Средняя</span>
+                                <p class="radio-subtitle">Тренировки 3-5 раз в неделю</p>
+                            </div>
+                        </label>
+
+                        <label class="radio">
+                            <div class="radio-wrapper">
+                                <input type="radio" class="radio__real" name="term" data-activity="1.725">
+                                <span class="radio__fake"></span>
+                            </div>
+                            <div class="radio-title-wrapper">
+                                <span class="radio-title">Высокая</span>
+                                <p class="radio-subtitle">Тренировки 6-7 раз в неделю</p>
+                            </div>
+                        </label>
+
+                        <label class="radio">
+                            <div class="radio-wrapper">
+                                <input type="radio" class="radio__real" name="term" data-activity="1.9">
+                                <span class="radio__fake"></span>
+                            </div>
+                            <div class="radio-title-wrapper">
+                                <span class="radio-title">Очень высокая</span>
+                                <p class="radio-subtitle">Больше 6 тренировок в неделю и физическая работа</p>
+                            </div>
+                        </label>
+                </section>
+                <!-- Верстка карточки активности -->
+
+                <section class="buttons">
+                    <button class="calculate">Рассчитать</button>
+                    <button class="reset">Очистить поля и расчет</button>
+                </section>
+
+            </div>
+        </div>
+
+        <div class="app-wrapper">
+            <div class="app-container">
+                <h3 class="section-title result">Ваша норма калорий</h3>
+                <div class="result-wrapper">
+                    <div class="result-item">
+                        <h3 class="result-title" id="supportWeight">3 800 ккал</h3>
+                        <span class="result-subtitle">поддержание веса</span>
+                    </div>
+                    <div class="result-item">
+                        <h3 class="result-title" id="throwWeight">3 300 ккал</h3>
+                        <span class="result-subtitle">снижение веса</span>
+                    </div>
+                    <div class="result-item">
+                        <h3 class="result-title" id="enlargeWeight">4 000 ккал</h3>
+                        <span class="result-subtitle">набор веса</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="user.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
